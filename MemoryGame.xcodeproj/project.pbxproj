@@ -14,6 +14,8 @@
 		C6E2BD5C1C8A0F0300E00C8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E2BD5A1C8A0F0300E00C8F /* LaunchScreen.storyboard */; };
 		C6E2BD671C8A0F0300E00C8F /* MemoryGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E2BD661C8A0F0300E00C8F /* MemoryGameTests.swift */; };
 		C6E2BD721C8A0F0300E00C8F /* MemoryGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E2BD711C8A0F0300E00C8F /* MemoryGameUITests.swift */; };
+		C6E2BD801C8A12DE00E00C8F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E2BD7F1C8A12DE00E00C8F /* Cell.swift */; };
+		C6E2BD821C9C28D900E00C8F /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E2BD811C9C28D900E00C8F /* Memory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C6E2BD6D1C8A0F0300E00C8F /* MemoryGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E2BD711C8A0F0300E00C8F /* MemoryGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameUITests.swift; sourceTree = "<group>"; };
 		C6E2BD731C8A0F0300E00C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6E2BD7F1C8A12DE00E00C8F /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		C6E2BD811C9C28D900E00C8F /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				C6E2BD581C8A0F0300E00C8F /* Assets.xcassets */,
 				C6E2BD5A1C8A0F0300E00C8F /* LaunchScreen.storyboard */,
 				C6E2BD5D1C8A0F0300E00C8F /* Info.plist */,
+				C6E2BD7F1C8A12DE00E00C8F /* Cell.swift */,
+				C6E2BD811C9C28D900E00C8F /* Memory.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E2BD821C9C28D900E00C8F /* Memory.swift in Sources */,
 				C6E2BD541C8A0F0300E00C8F /* ViewController.swift in Sources */,
 				C6E2BD521C8A0F0300E00C8F /* AppDelegate.swift in Sources */,
+				C6E2BD801C8A12DE00E00C8F /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

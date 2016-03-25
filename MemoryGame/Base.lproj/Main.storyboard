@@ -1,25 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemoryGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jsx-gC-P7C">
+                                <rect key="frame" x="22" y="112" width="365" height="495"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="jLO-x0-9Hl">
+                                    <size key="itemSize" width="50" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="239" reuseIdentifier="cellID" id="bM6-MJ-SsC" customClass="Cell" customModule="MemoryGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-wv-oSR">
+                                                    <rect key="frame" x="4" y="14" width="42" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.82720467931937169" green="0.75840420905870654" blue="0.14569986711192515" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="4T2-wv-oSR" firstAttribute="centerY" secondItem="bM6-MJ-SsC" secondAttribute="centerY" id="8C9-qy-RQx"/>
+                                            <constraint firstItem="4T2-wv-oSR" firstAttribute="centerX" secondItem="bM6-MJ-SsC" secondAttribute="centerX" id="BgV-Sf-oty"/>
+                                            <constraint firstItem="4T2-wv-oSR" firstAttribute="centerX" secondItem="bM6-MJ-SsC" secondAttribute="centerX" id="Ejg-WU-oOb"/>
+                                            <constraint firstItem="4T2-wv-oSR" firstAttribute="top" secondItem="bM6-MJ-SsC" secondAttribute="topMargin" constant="6" id="JjW-1i-80Q"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="lbl" destination="4T2-wv-oSR" id="i7Y-S7-t0L"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="B3T-R5-Srg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0RI-ll-YBN"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="9C5-g3-SRW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jsx-gC-P7C" secondAttribute="bottom" constant="33" id="GEA-P8-Ba3"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GNs-Ss-QV1"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-10" id="QfO-u2-xrk"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="T7a-Oz-lhe"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="X2B-BW-dWT"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="ZT8-Fx-9nO"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="26" id="cne-lg-pbF"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-40" id="cwA-ia-Xzr"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jNC-62-rbF"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="67:142" id="p4N-2w-tEU"/>
+                            <constraint firstItem="Jsx-gC-P7C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="wRi-Wo-0UW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GNs-Ss-QV1"/>
+                                <exclude reference="T7a-Oz-lhe"/>
+                                <exclude reference="X2B-BW-dWT"/>
+                                <exclude reference="ZT8-Fx-9nO"/>
+                                <exclude reference="cwA-ia-Xzr"/>
+                                <exclude reference="jNC-62-rbF"/>
+                                <exclude reference="p4N-2w-tEU"/>
+                                <exclude reference="GEA-P8-Ba3"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collection" destination="Jsx-gC-P7C" id="V3k-Ka-SVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="447.5" y="406.5"/>
         </scene>
     </scenes>
 </document>
