@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MemoryGame.initCards(Int) -&gt; ():Memory.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "values">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.flipCardUp(NSIndexPath, cell : Cell) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "game.getCard(path.row, y: path.section).solved">
+            </PersistentString>
+            <PersistentString
+               value = "activeCounter">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
